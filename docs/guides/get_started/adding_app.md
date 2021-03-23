@@ -52,7 +52,7 @@ values={[
 </TabItem>
 <TabItem value="curl">
 
-```bash {10-11,18-23}
+```bash {10-11,18-22}
 curl -X POST \
 -H "Authorization: Bearer <API_TOKEN>" \
 -d '
@@ -70,8 +70,7 @@ curl -X POST \
       "collectorId": "oauth2Client",
       "type": "oauth2Client",
       "vars": {
-        "client_name": "Sample App",
-        "client_id": "sample",
+        "client_id": "myapp",
         "redirect_uris": [
           "https://localhost/callback"
         ],
