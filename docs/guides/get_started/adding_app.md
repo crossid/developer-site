@@ -26,6 +26,7 @@ To speed things up, let's start from a sample with a framework of your choice.
 | Framework       | Repository                                             |
 | --------------- | ------------------------------------------------------ |
 | Node.js Express | [see walk through](/docs/langs/backend/nodejs-express) |
+| Golang          | https://github.com/crossid/samples-golang              |
 
 Each sample has a _README.md_ file with instructipns how to set up the sample.
 
