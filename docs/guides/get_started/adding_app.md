@@ -23,9 +23,9 @@ Crossid supports various app types such as _single page applications (SPA)_, _mo
 
 To speed things up, let's start from a sample with a framework of your choice.
 
-| Framework       | Repository                                 |
-| --------------- | ------------------------------------------ |
-| Node.js Express | https://github.com/crossid/sample-js-react |
+| Framework       | Repository                                             |
+| --------------- | ------------------------------------------------------ |
+| Node.js Express | [see walk through](/docs/langs/backend/nodejs-express) |
 
 Each sample has a _README.md_ file with instructipns how to set up the sample.
 
@@ -52,31 +52,35 @@ values={[
 </TabItem>
 <TabItem value="curl">
 
-```bash {15-18}
+```bash {10-11,18-23}
 curl -X POST \
 -H "Authorization: Bearer <API_TOKEN>" \
 -d '
 {
-    "provisionFlowId":"provisionOAuthClient",
-    "provisionFlowData": {
-    "currentStepId": "AppManifest",
-    "partial": false,
-    "stepData": [{
-            "title": "title",
-            "stepID": "AppManifest",
-            "stepType": "AppManifest",
-            "tag": "OAuthClientProvision",
-            "data": {
-                "clientId": "sample",
-                "clientName": "Sample app",
-                "clientSecret": "super-secret",
-                "redirectUri": "https://localhost/callback"
-            },
-            "skipped": false
-        }
-    ]}
+  "type": "singlePageApp",
+  "data": [
+    {
+      "collectorId": "appDetails",
+      "vars": {
+        "displayName": "My App",
+        "appId": "myapp"
+      }
+    },
+    {
+      "collectorId": "oauth2Client",
+      "type": "oauth2Client",
+      "vars": {
+        "client_name": "Sample App",
+        "client_id": "sample",
+        "redirect_uris": [
+          "https://localhost/callback"
+        ],
+        "audience": ["https://localhost"]
+      }
+    }
+  ]
 }
-' https://{tenant}.crossid.io/api/v1/apps/.fromTemplate/?reason=sample-app
+' https://{tenant}.crossid.io/api/v1/apps/.provision/?reason=sample-app
 ```
 
 </TabItem>

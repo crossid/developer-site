@@ -28,7 +28,7 @@ values={[
 ]}>
 <TabItem value="curl">
 
-```curl
+```curl {3,6-9}
 curl -X POST -d '
 {
   "company": "Hooli Corp",

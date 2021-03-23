@@ -22,7 +22,7 @@ values={[
 ]}>
 <TabItem value="curl">
 
-```curl
+```curl {5-7}
 curl -X POST \
 -H "Authorization: Bearer 4oUgbPOXbBMnpp2YorY6185odcnub3h3" \
 -d '

@@ -19,17 +19,17 @@ We use a simple [express-openid-connect](https://github.com/auth0/express-openid
 Let's init a new project:
 
 ```bash
-mkdir myapp
+mkdir myapp ; cd myapp
 npm init -f
 npm install express dotenv auth0/express-openid-connect
 ```
 
 ### Configure
 
-_express-openid-connect_ can be configured via _env vars_, a minimal _.env_ file would like look:
+_express-openid-connect_ can be configured via _env vars_, a minimal `.env` file would like look:
 
 ```bash {1-3}
-ISSUER_BASE_URL=https://<TENANT>.crossid.io
+ISSUER_BASE_URL=https://<TENANT>.crossid.io/api/v1/oauth2/authorization-servers/default
 CLIENT_ID=<CLIENT_ID>
 SECRET=<RANDOM_STRING>
 BASE_URL=https://localhost
@@ -37,8 +37,8 @@ BASE_URL=https://localhost
 
 All `<>` placeholders must be replaced.
 
-- Line 1: `<TENANT>` is your Crossid tenant, no tenant yet? [create one for free](/docs/guides/get-started/signup).
-- Line 2: `<CLIENT_ID>` is the client id you get by telling Crossid about your app.
+- Line 1: `<TENANT>` is your Crossid tenant, don't have a tenant yet? [create one for free!](/docs/guides/get-started/signup)
+- Line 2: `<CLIENT_ID>` is the [client id](/docs/guides/get-started/add-app#tell-crossid-about-your-app) you get by telling Crossid about your app.
 - Line 3: Choose a long random string (note: this is not a client secret, it's secret for protecting the session cookie)
 
 note that we use `https` in our _BASE_URL_ to avoid cookie policy issues so proxy is needed (see Caddy below)
