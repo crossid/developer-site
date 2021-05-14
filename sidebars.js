@@ -5,8 +5,9 @@ module.exports = {
         "Get Started": [
           "guides/get_started/preface",
           "guides/get_started/signup",
-          "guides/get_started/add_user",
+          "guides/get_started/add_person",
           "guides/get_started/add_app",
+          "guides/get_started/user_assignment",
           "guides/get_started/try_login",
           "guides/get_started/recap",
         ],

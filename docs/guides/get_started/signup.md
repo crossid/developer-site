@@ -22,8 +22,9 @@ You have to choose a tenant name, which is used in various places such as Login 
 For example, if you choose `hooli` as a tenant name, your tenant URL would be `https://hooli.crossid.io`
 
 <Tabs
-defaultValue="curl"
+defaultValue="web"
 values={[
+{label: 'Web', value: 'web'},
 {label: 'Curl', value: 'curl'},
 ]}>
 <TabItem value="curl">
@@ -43,9 +44,21 @@ curl -X POST -d '
 ```
 
 </TabItem>
+<TabItem value="web">
+
+1. Go to https://crossid.io/try
+1. Signup for a new tenant.
+
+</TabItem>
 </Tabs>
 
+Check your email for tenant activation.
+
 ## Get API token
+
+:::note
+API token is only required if you plan to interact with the REST API using an HTTO clinet such as curl. Skip this step if you plan to use the web admin console.
+:::
 
 Let's get an access token that is required ito securely intreact with Crossid API.
 

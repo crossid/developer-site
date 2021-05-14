@@ -8,8 +8,13 @@ description: Recap the get started guide
 
 We have seen how Crossid can manage and sign users in.
 
-Crossid offers many more identity services that drastically simplify user management.
+Crossid offers many more identity services that drastically simplifies identity management.
 
 ### What's next?
 
-Get an _API Token_ to interact with the REST API.
+- Check other guides and concepts.
+- See [languages](/docs/languages) for language specific.
+- Get an _API Token_ to interact with the [REST API](/docs/reference/api).
+- Read the [Blog](/blog).
+
+Needs more help? [Contact us.](https://crossid.io/contact)

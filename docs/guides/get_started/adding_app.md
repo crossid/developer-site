@@ -46,9 +46,10 @@ values={[
 ]}>
 <TabItem value="console">
 
-1. In Admin console, navigate to <b>Applications</b>.
-1. Click <b>Add Application</b>.
-1. Select <b>Web App</b>.
+1. In Admin console, navigate to <b>Integration &rarr; Marketplace</b>.
+1. Choose <b>Web Application</b>.
+1. Click on <b>Add Integration</b>.
+1. Follow wizard steps.
 
 </TabItem>
 <TabItem value="curl">
