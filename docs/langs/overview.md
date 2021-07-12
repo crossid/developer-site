@@ -25,6 +25,14 @@ Crossid uses standard protocols such as _OpenID Connect_ and _OAuth2_ to log use
 We advise not to use any proprietary libraries to avoid vendor lock.
 :::
 
+#### Javascript
+
+| Library                                                                   | Purpose| Demo Repo | 
+| ------------------------------------------------------------------------- |--------|  -------|
+| [Crossid SPA JS](https://github.com/crossid/crossid-spa-js)               | Use if you write plain js/ts code | https://github.com/crossid/crossid-spa-js-demo |
+| [Crossid React](https://github.com/crossid/crossid-react)                 | Use if you write your app in React  | https://github.com/crossid/crossid-react-demo |
+| [Crossid Vue](https://github.com/crossid/crossid-vue)                     | Se if you write your app in Vue  | https://github.com/crossid/crossid-vue-demo |
+
 #### NodeJS
 
 | Library                                                                   |

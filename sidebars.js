@@ -16,6 +16,7 @@ module.exports = {
     Concepts: ["concepts/application"],
     Languages: [
       "langs/overview",
+      { Frontend: ["langs/frontend/spa_js"] },
       { Backend: ["langs/backend/nodejs_express"] },
     ],
     Reference: [
