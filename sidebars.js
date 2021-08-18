@@ -13,7 +13,7 @@ module.exports = {
         ],
       },
     ],
-    Concepts: ["concepts/application"],
+    Concepts: ["concepts/tenant", "concepts/application"],
     Languages: [
       "langs/overview",
       { Frontend: ["langs/frontend/spa_js"] },
