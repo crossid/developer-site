@@ -29,8 +29,9 @@ npm install express dotenv auth0/express-openid-connect
 _express-openid-connect_ can be configured via _env vars_, a minimal `.env` file would like look:
 
 ```bash {1-3}
-ISSUER_BASE_URL=https://<TENANT>.crossid.io/api/v1/oauth2/authorization-servers/default
+ISSUER_BASE_URL=https://<TENANT>.crossid.io/oauth2
 CLIENT_ID=<CLIENT_ID>
+CLIENT_SECRET=<CLIENT_SECRET>
 SECRET=<RANDOM_STRING>
 BASE_URL=https://localhost
 ```
@@ -39,9 +40,13 @@ All `<>` placeholders must be replaced.
 
 - Line 1: `<TENANT>` is your Crossid tenant, don't have a tenant yet? [create one for free!](/docs/guides/get-started/signup)
 - Line 2: `<CLIENT_ID>` is the [client id](/docs/guides/get-started/add-app#tell-crossid-about-your-app) you get by telling Crossid about your app.
-- Line 3: Choose a long random string (note: this is not a client secret, it's secret for protecting the session cookie)
+- Line 3: `<CLIENT_SECRET>` is the [client secret](/docs/guides/get-started/add-app#tell-crossid-about-your-app) you get by telling Crossid about your app.
+- Line 4: Choose a long random string (note: this is not a client secret, it's secret for protecting the session cookie)
 
-note that we use `https` in our _BASE_URL_ to avoid cookie policy issues so proxy is needed (see Caddy below)
+Notes:
+
+- We use `https` in our _BASE_URL_ to avoid cookie policy issues so proxy is needed (see Caddy below)
+- The app below requires the _redirect_uris_ to be _https://localhost/callback_
 
 ### Server
 
@@ -53,7 +58,15 @@ const express = require("express");
 const { auth } = require("express-openid-connect");
 require("dotenv").config();
 const app = express();
-app.use(auth());
+app.use(
+  auth({
+    authorizationParams: {
+      response_type: "code id_token",
+      audience: "example.com",
+      scope: "openid profile",
+    },
+  })
+);
 app.set("trust proxy", true);
 app.get("/", (req, res) => {
   res.send(`hello ${req.oidc.user.name}`);
