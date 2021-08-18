@@ -9,9 +9,9 @@ description: Assign user to app.
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-A person must be assigned to an app before first.
+A person must be assigned to an app before it can access it.
 
-Lets assign the [created person](add-person) to our app.
+Lets assign the [person](add-person) we previously created to our app.
 
 <Tabs
 defaultValue="console"

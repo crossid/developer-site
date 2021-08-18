@@ -89,8 +89,8 @@ curl -X POST \
 
 Crossid will give you back _client id_ and _client secret_ needed for our app.
 
-### Update app config
+### Update your app
 
-Everytime a user tries to login, the app should redirect to Crossid and provide the client id.
+Everytime a user tries to login, the app should redirect to Crossid and provide the _client id_.
 
-Follow the _README.md_ of the sample project how to set the _client_id_ and optionally the _client_secret_.
+Follow the _README.md_ of the sample project how to set the _client_id_ and optionally the _client_secret_ in your app.

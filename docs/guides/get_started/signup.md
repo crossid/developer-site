@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 ## What is a Tenant?
 
-A tenant is an isolated private namespace that holds all resources related to identity management.
+A tenant is an isolated private namespace that holds all resources related to identity management, such as [applications](/docs/concepts/Application), users, groups.
 
 To get started, let's signup a free developer edition tenant.
 
@@ -32,21 +32,21 @@ values={[
 ```curl {3,6-9}
 curl -X POST -d '
 {
-  "company": "Hooli Corp",
+  "displayName": "Hooli Corp",
+  "tenantId": "hooli",
   "type": "developer",
   "user": {
-    "firstName": "Gavin",
-    "lastName": "Belson",
+    "displayName": "Gavin Belson",
     "email": "gavin@hooli.io",
     "password": "initial_pass"
   }
-}' https://api.crossid.io/api/global/tenants
+}' https://cid.crossid.io/api/global/v1/tenants/.register
 ```
 
 </TabItem>
 <TabItem value="web">
 
-1. Go to https://crossid.io/try
+1. Go to https://crossid.io/signup
 1. Signup for a new tenant.
 
 </TabItem>
@@ -57,10 +57,10 @@ Check your email for tenant activation.
 ## Get API token
 
 :::note
-API token is only required if you plan to interact with the REST API using an HTTO clinet such as curl. Skip this step if you plan to use the web admin console.
+API token is only required if you plan to interact with the REST API using an HTTP clinet such as curl. Skip this step if you plan to use the web admin console.
 :::
 
-Let's get an access token that is required ito securely intreact with Crossid API.
+Let's get a short access token that is required to securely intreact with Crossid API.
 
 <Tabs
 defaultValue="console"
@@ -69,10 +69,9 @@ values={[
 ]}>
 <TabItem value="console">
 
-1. From the admin console, navigate to <b>Security</b> -> <b>API</b>.
-1. Click <b>Create Token</b>.
-1. Name the token and save it.
-1. Save the token somewhere safe.
+1. From the admin console, navigate to <b>Applications</b> -> <b>Crossid</b>.
+1. Select the <b>API Access</b> tab.
+1. Click <b>Generate Token</b> and copy it.
 
 </TabItem>
 </Tabs>
