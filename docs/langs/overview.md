@@ -27,11 +27,11 @@ We advise not to use any proprietary libraries to avoid vendor lock.
 
 #### Javascript
 
-| Library                                                                   | Purpose| Demo Repo | 
-| ------------------------------------------------------------------------- |--------|  -------|
-| [Crossid SPA JS](https://github.com/crossid/crossid-spa-js)               | Use if you write plain js/ts code | https://github.com/crossid/crossid-spa-js-demo |
-| [Crossid React](https://github.com/crossid/crossid-react)                 | Use if you write your app in React  | https://github.com/crossid/crossid-react-demo |
-| [Crossid Vue](https://github.com/crossid/crossid-vue)                     | Se if you write your app in Vue  | https://github.com/crossid/crossid-vue-demo |
+| Library                                                     | Purpose                            | Demo Repo                                      |
+| ----------------------------------------------------------- | ---------------------------------- | ---------------------------------------------- |
+| [Crossid SPA JS](https://github.com/crossid/crossid-spa-js) | Use if you write plain js/ts code  | https://github.com/crossid/crossid-spa-js-demo |
+| [Crossid React](https://github.com/crossid/crossid-react)   | Use if you write your app in React | https://github.com/crossid/crossid-react-demo  |
+| [Crossid Vue](https://github.com/crossid/crossid-vue)       | Se if you write your app in Vue    | https://github.com/crossid/crossid-vue-demo    |
 
 #### NodeJS
 
@@ -41,8 +41,9 @@ We advise not to use any proprietary libraries to avoid vendor lock.
 | [Express OpenID Conenct](https://github.com/auth0/express-openid-connect) |
 | [PassportJS](http://www.passportjs.org)                                   |
 
-### Golang
+#### Golang
 
-| Library             |
-| ------------------- |
-| Go OAuth 2.0 Client |
+| Library             | Purpose                              | Demo Repo                                                      |
+| ------------------- | ------------------------------------ | -------------------------------------------------------------- |
+| Go OAuth 2.0 Client | Official HTTP Client                 | https://github.com/crossid/crossid-go/tree/main/examples/login |
+| Crossid Go          | Protect endpoints with JWTs and more | https://github.com/crossid/crossid-go                          |
