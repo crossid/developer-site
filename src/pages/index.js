@@ -58,14 +58,14 @@ function Home() {
       title={`${siteConfig.title}`}
       description="The identity hub for your apps, APIs and devices."
     >
-      <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <header className={clsx("hero", styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
               className={clsx(
-                "button button--outline button--secondary button--lg",
+                "button button--outline button--primary button--lg",
                 styles.getStarted
               )}
               to={useBaseUrl("docs/guides/get-started")}

@@ -14,7 +14,7 @@ module.exports = {
       title: "Developer",
       logo: {
         alt: "CrossID Logo",
-        src: "img/logo.png",
+        src: "img/logot-909x254.png",
       },
       items: [
         {
@@ -33,7 +33,7 @@ module.exports = {
     },
     footer: {
       // https://github.com/facebook/docusaurus/issues/2692
-      style: "dark",
+      style: "light",
       links: [
         {
           title: "Docs",
