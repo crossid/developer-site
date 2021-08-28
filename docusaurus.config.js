@@ -69,12 +69,29 @@ module.exports = {
           title: "More",
           items: [
             {
+              label: "Crossid Website",
+              href: "https://crossid.io",
+            },
+            {
               label: "Blog",
               to: "blog",
             },
             {
               label: "GitHub",
               href: "https://github.com/crossid",
+            },
+          ],
+        },
+        {
+          title: "Company",
+          items: [
+            {
+              label: "Contact",
+              href: "https://crossid.io/contact",
+            },
+            {
+              label: "About",
+              href: "https://www.crossid.io/company",
             },
           ],
         },
