@@ -13,9 +13,3 @@ Everything is ready, lets try to login with the user we created previously.
 1. Use the credentials you previously created.
 
 You should successfully login.
-
-:::note
-
-Need help? check [support channels](/support).
-
-:::
