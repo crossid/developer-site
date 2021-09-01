@@ -1,5 +1,5 @@
 ---
-slug: crossid-with-echo
+slug: echo-with-oauth2
 title: Protect Echo with OAuth2
 description: An introduction to the System for Cross-domain Identity Management.
 author: Asaf Shakarzy
