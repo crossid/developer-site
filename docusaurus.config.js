@@ -10,6 +10,9 @@ module.exports = {
   organizationName: "crossid",
   projectName: "ciddevsite",
   themeConfig: {
+    prism: {
+      additionalLanguages: ["go"],
+    },
     navbar: {
       title: "Developer",
       logo: {
