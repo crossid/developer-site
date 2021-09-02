@@ -62,15 +62,12 @@ For the sake of example, we use http://httpbin.org/anything as our app. try clic
 
 Lets configure and run _oauth2-proxy_ in a docker container:
 
-```bash {5-8,12-13}
+```bash {5,9-10}
 docker run --rm -p 4180:4180 \
 -e OAUTH2_PROXY_HTTP_ADDRESS=0.0.0.0:4180 \
--e OAUTH2_PROXY_SCOPE='openid email profile' \
 -e OAUTH2_PROXY_REDIRECT_URL=http://127.0.0.1:4180/oauth2/callback \
--e OAUTH2_PROXY_LOGIN_URL=https://<tenant>.crossid.io/oauth2/auth?audience=oauth2proxy \
--e OAUTH2_PROXY_REDEEM_URL=https://<tenant>.crossid.io/oauth2/token?audience=oauth2proxy \
--e OAUTH2_PROXY_VALIDATE_URL=https://<tenant>.crossid.io/oauth2/userinfo \
--e OAUTH_PROXY_VALIDATE=https://<tenant>.crossid.io/oauth2/userinfo \
+-e OAUTH2_PROXY_PROVIDER=oidc \
+-e OAUTH2_PROXY_OIDC_ISSUER_URL=https://<tenant>.crossid.io/oauth2/ \
 -e OAUTH2_PROXY_EMAIL_DOMAINS=* \
 -e OAUTH2_PROXY_COOKIE_SECRET=someSecret123456 \
 -e OAUTH2_PROXY_COOKIE_SECURE=true \
@@ -81,7 +78,9 @@ docker run --rm -p 4180:4180 \
 quay.io/oauth2-proxy/oauth2-proxy:latest
 ```
 
-Replace <tenant_url> with your tenant (e.g., `acme.crossid.io/....`)
+Replace `<tenant>` with your tenant (e.g., `acme.crossid.io/....`).
+
+Replace `<client_id>` and `<client_secret>` from previous step.
 
 With this configuration, every request to `http://127.0.0.1:4180/anything` will be proxied to the upstream (our app).
 We simply use _httpbin.org_ that simply echos the request info.
