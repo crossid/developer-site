@@ -2,6 +2,7 @@
 slug: echo-with-oauth2
 title: Protect Echo with OAuth2
 description: An introduction to the System for Cross-domain Identity Management.
+image: https://cdn.labstack.com/images/echo-logo.svg
 author: Asaf Shakarzy
 author_title: Core Team
 author_url: https://github.com/asaf

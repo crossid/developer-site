@@ -2,6 +2,7 @@
 slug: oauth2-proxy
 title: Proxy with oauth2-proxy
 description: Protect your apps and files using oauth2-proxy identity awareness proxy.
+image: https://oauth2-proxy.github.io/oauth2-proxy/img/logos/OAuth2_Proxy_icon.svg
 author: Asaf Shakarzy
 author_title: Core Team
 author_url: https://github.com/asaf
