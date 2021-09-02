@@ -98,6 +98,11 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} crossid.io`,
     },
+    googleAnalytics: {
+      trackingID: "UA-157001541-2",
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
   },
   presets: [
     [
