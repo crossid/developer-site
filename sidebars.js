@@ -11,10 +11,13 @@ module.exports = {
           "guides/get_started/try_login",
           "guides/get_started/recap",
         ],
-        "How To": ["guides/howto/add_spa_app"],
+        "How To": [
+          "guides/howto/add_spa_app",
+          "guides/howto/app_user_assignment",
+        ],
       },
     ],
-    Concepts: ["concepts/tenant", "concepts/application"],
+    Concepts: ["concepts/tenant", "concepts/application", "concepts/identity"],
     Languages: [
       "langs/overview",
       { Frontend: ["langs/frontend/spa_js"] },
