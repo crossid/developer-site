@@ -10,7 +10,11 @@ keywords:
   - express
 ---
 
-This guide explains how to sign users in using Node.JS and Express.
+This guide explains the basics of how to sign users in using Node.JS and Express.
+
+:::note
+For a more robust example, see [https://github.com/crossid/sample-nodejs](https://github.com/crossid/sample-nodejs).
+:::
 
 We use a simple [express-openid-connect](https://github.com/auth0/express-openid-connect) library that wraps the certified [openid-client](https://github.com/panva/node-openid-client) for the Express framework.
 
