@@ -5,11 +5,11 @@ mermaid.initialize({
   startOnLoad: true,
 });
 
-const Mermaid = ({ chart }) => {
+const Mermaid = ({ children }) => {
   useEffect(() => {
     mermaid.contentLoaded();
   }, []);
-  return <div className="mermaid">{chart}</div>;
+  return <div className="mermaid">{children.replace(/;/g, "\n")}</div>;
 };
 
 export default Mermaid;

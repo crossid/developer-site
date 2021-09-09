@@ -22,7 +22,15 @@ This post explains how to configure and run _oauth2-proxy_ in a docker container
 
 ## Architecture
 
-<Mermaid chart={`sequenceDiagram; autonumber; Browser->>+Oauth2-Proxy: GET: /myapp; Browser->>+Crossid: User not authenticated; Crossid->>Crossid: User Signin; Crossid->>Browser: User Session Created; Browser->>App: GET /myapp; Note right of App: forwarded-user: foo@bar.com;`}/>
+<Mermaid>
+sequenceDiagram; autonumber;
+Browser->>+Oauth2-Proxy: GET: /myapp;
+Browser->>+Crossid: User not authenticated;
+Crossid->>Crossid: User Signin;
+Crossid->>Browser: User Session Created;
+Browser->>App: GET /myapp;
+Note right of App: forwarded-user: foo@bar.com;
+</Mermaid>
 
 1. An anonymous visitor tries to access the app.
 2. _oauth2-proxy_ has no session for the visitor, so it redirects the user to Crossid for login.
