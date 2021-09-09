@@ -28,6 +28,11 @@ module.exports = {
         },
         { to: "blog", label: "Blog", position: "left" },
         {
+          to: "/support",
+          label: "Support",
+          position: "right",
+        },
+        {
           href: "https://github.com/crossid",
           label: "GitHub",
           position: "right",
