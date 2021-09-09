@@ -11,6 +11,7 @@ module.exports = {
           "guides/get_started/try_login",
           "guides/get_started/recap",
         ],
+        "How To": ["guides/howto/add_spa_app"],
       },
     ],
     Concepts: ["concepts/tenant", "concepts/application"],

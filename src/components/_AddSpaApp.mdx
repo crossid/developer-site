@@ -1,0 +1,53 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+defaultValue="console"
+values={[
+{label: 'Console', value: 'console'},
+{label: 'Curl', value: 'curl'}
+]}>
+<TabItem value="console">
+
+1. In Admin console, navigate to <b>Integration &rarr; Marketplace</b>.
+1. Choose <b>Add Single Page Application (SPA)</b>.
+1. Click on <b>Add Integration</b>.
+1. Follow wizard steps.
+
+![how-to](/img/add_spa.gif)
+
+</TabItem>
+<TabItem value="curl">
+
+```bash {10-11,18-22}
+curl -X POST \
+-H "Authorization: Bearer <API_TOKEN>" \
+-d '
+{
+  "type": "singlePageApp",
+  "data": [
+    {
+      "collectorId": "appDetails",
+      "vars": {
+        "displayName": "My App",
+        "appId": "myapp"
+      }
+    },
+    {
+      "collectorId": "oauth2Client",
+      "type": "oauth2Client",
+      "vars": {
+        "client_id": "myapp",
+        "redirect_uris": [
+          "https://localhost/callback"
+        ],
+        "audience": ["https://localhost"]
+      }
+    }
+  ]
+}
+' https://{tenant}.crossid.io/api/v1/apps/.provision/?reason=sample-app
+```
+
+</TabItem>
+</Tabs>
