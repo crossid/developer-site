@@ -1,7 +1,7 @@
 ---
 slug: do-crossid-monorepo
 title: Deploy identity-aware Monorepo on DigitalOcean.
-description: Monorepo with identity-awareness, using Crosisd, deployed on DigitalOcean app platform.
+description: Monorepo with identity-awareness, using Crossid, deployed on DigitalOcean app platform.
 image: https://images.prismic.io/www-static/72f5e1f3-5df0-40c0-8c7f-4d85f3ec0c92_AP-blog-banner.png?auto=compress,format
 author: Asaf Shakarzy
 author_title: Core Team
