@@ -120,11 +120,17 @@ module.exports = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl:
             "https://github.com/crossid/developer-site/edit/master/website/",
+          remarkPlugins: [
+            [require("mdx-mermaid"), { mermaid: { theme: "neutral" } }],
+          ],
         },
         blog: {
           showReadingTime: true,
           editUrl:
             "https://github.com/crossid/developer-site/edit/master/website/blog/",
+          remarkPlugins: [
+            [require("mdx-mermaid"), { mermaid: { theme: "neutral" } }],
+          ],
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

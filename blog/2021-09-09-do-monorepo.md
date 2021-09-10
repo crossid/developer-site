@@ -9,7 +9,6 @@ author_url: https://github.com/asaf
 tags: [digitalocean, auth, iam, ciam]
 ---
 
-import Mermaid from '@theme/Mermaid';
 import AddSpaApp from "../src/components/\_AddSpaApp.mdx";
 import AppUserAssignment from "../src/components/AssignUserToApp.mdx";
 
@@ -39,25 +38,25 @@ The sample repo introduces two components:
 
 _components diagram_
 
-<Mermaid>
-flowchart LR;
-subgraph App-Platform;
-direction LR;
-subgraph frontend-react;
-direction LR;
-end;
-subgraph api-go;
-direction LR;
-token-middleware -- valid token --> endpoint;
-end;
-end;
-subgraph Crossid;
-direction LR;
-end;
-frontend-react --redirect browser to login--> Crossid;
-Browser --GET /react--> frontend-react;
+```mermaid
+flowchart LR
+subgraph App-Platform
+direction LR
+subgraph frontend-react
+direction LR
+end
+subgraph api-go
+direction LR
+token-middleware -- valid token --> endpoint
+end
+end
+subgraph Crossid
+direction LR
+end
+frontend-react --redirect browser to login--> Crossid
+Browser --GET /react--> frontend-react
 Browser --GET /api-go--> api-go
-</Mermaid>
+```
 
 ### api-go - an HTTP micro service.
 
@@ -85,14 +84,15 @@ The _frontend-react_ component let user:
 - Sign users out via Crossid.
 
 _interaction diagram_
-<Mermaid>
-sequenceDiagram; autonumber;
-Browser->>+frontend-react: GET: /react/posts;
-Browser->>+Crossid: User not authenticated;
-Crossid->>Crossid: User Signin;
-Crossid->>Browser: Access Token;
-Browser->>api-go: GET /api-go;
-</Mermaid>
+
+```mermaid
+sequenceDiagram; autonumber
+Browser->>+frontend-react: GET: /react/posts
+Browser->>+Crossid: User not authenticated
+Crossid->>Crossid: User Signin
+Crossid->>Browser: Access Token
+Browser->>api-go: GET /api-go
+```
 
 1. An anonymous visitor tries to access `/react/posts`, a protected react route.
 1. Browser is redirected to Crossid for login.

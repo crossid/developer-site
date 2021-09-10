@@ -9,7 +9,6 @@ author_url: https://github.com/asaf
 tags: [proxy, reverse proxy, zero trust, oauth2, openid]
 ---
 
-import Mermaid from '@theme/Mermaid';
 import AddIntegration from '../src/components/AddIntegration';
 
 If you want to free yourself from coding authentication for your apps, or just want to servce protected files only for your users, a reverse proxy with identity awareness can be a good fit.
@@ -22,15 +21,15 @@ This post explains how to configure and run _oauth2-proxy_ in a docker container
 
 ## Architecture
 
-<Mermaid>
-sequenceDiagram; autonumber;
-Browser->>+Oauth2-Proxy: GET: /myapp;
-Browser->>+Crossid: User not authenticated;
-Crossid->>Crossid: User Signin;
-Crossid->>Browser: User Session Created;
-Browser->>App: GET /myapp;
-Note right of App: forwarded-user: foo@bar.com;
-</Mermaid>
+```mermaid
+sequenceDiagram; autonumber
+Browser->>+Oauth2-Proxy: GET: /myapp
+Browser->>+Crossid: User not authenticated
+Crossid->>Crossid: User Signin
+Crossid->>Browser: User Session Created
+Browser->>App: GET /myapp
+Note right of App: forwarded-user: foo@bar.com
+```
 
 1. An anonymous visitor tries to access the app.
 2. _oauth2-proxy_ has no session for the visitor, so it redirects the user to Crossid for login.
