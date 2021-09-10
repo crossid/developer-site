@@ -1,5 +1,5 @@
 module.exports = {
-  someSidebar: {
+  docsSidebar: {
     Guides: [
       {
         "Get Started": [
@@ -23,35 +23,30 @@ module.exports = {
       { Frontend: ["langs/frontend/spa_js"] },
       { Backend: ["langs/backend/nodejs_express"] },
     ],
-    Reference: [
-      {
-        RestAPI: [
-          "reference/api/preface",
-          "reference/api/api-overview",
-          "reference/api/apps",
-          "reference/api/resources",
-          "reference/api/resource-types",
-          "reference/api/rules",
-          "reference/api/filters",
-          "reference/api/audit",
-          "reference/api/flows",
-          "reference/api/insights",
-          "reference/api/jobs",
-          "reference/api/schemas",
-          "reference/api/mappers",
-          "reference/api/secrets",
-          {
-            Auth: [
-              "reference/api/api-tokens",
-              "reference/api/sessions",
-              "reference/api/auth-errors",
-            ],
-          },
-          "reference/api/changes",
-          "reference/api/health",
-          "reference/api/api-schemas",
-        ],
-      },
-    ],
   },
+  restapi: [
+    "reference/api/api-overview",
+    "reference/api/apps",
+    "reference/api/resources",
+    "reference/api/resource-types",
+    "reference/api/rules",
+    "reference/api/filters",
+    "reference/api/audit",
+    "reference/api/flows",
+    "reference/api/insights",
+    "reference/api/jobs",
+    "reference/api/schemas",
+    "reference/api/mappers",
+    "reference/api/secrets",
+    {
+      Auth: [
+        "reference/api/api-tokens",
+        "reference/api/sessions",
+        "reference/api/auth-errors",
+      ],
+    },
+    "reference/api/changes",
+    "reference/api/health",
+    "reference/api/api-schemas",
+  ],
 };

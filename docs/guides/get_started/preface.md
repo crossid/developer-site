@@ -1,4 +1,5 @@
 ---
+id: preface
 title: The Crossid Platform
 sidebar_label: Preface
 slug: /guides/get-started
