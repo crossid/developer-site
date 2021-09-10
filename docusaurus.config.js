@@ -14,7 +14,8 @@ module.exports = {
       additionalLanguages: ["go"],
     },
     navbar: {
-      title: "Developer",
+      hideOnScroll: true,
+      title: "Crossid Developer Hub",
       logo: {
         alt: "CrossID Logo",
         src: "img/logot-909x254.png",
