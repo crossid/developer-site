@@ -18,6 +18,7 @@ module.exports = {
       },
     ],
     Concepts: ["concepts/tenant", "concepts/application", "concepts/identity"],
+    "Sample Apps": ["sample_apps/sample-monorepo", "sample_apps/sample-nodejs"],
     Languages: [
       "langs/overview",
       { Frontend: ["langs/frontend/spa_js"] },

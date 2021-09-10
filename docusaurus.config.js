@@ -1,3 +1,12 @@
+const transformer = require("@crossid/docusaurus-remote-content").transformer;
+
+function createRemoteContentTransformer(path) {
+  return function remoteContentTransformer(c, data) {
+    const d = transformer(c, data);
+    return d.replace(/(\(\.\/(.*?)\))/gi, `(${path}/$2)`);
+  };
+}
+
 module.exports = {
   title: "Crossid Developer Hub",
   tagline:
@@ -119,6 +128,47 @@ module.exports = {
       anonymizeIP: true, // Should IPs be anonymized?
     },
   },
+  plugins: [
+    [
+      "@crossid/docusaurus-remote-content",
+      {
+        type: "docs",
+        cleanup: true,
+        contents: [
+          {
+            file: "sample_apps/sample-nodejs.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-nodejs/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-nodejs.
+:::`,
+            meta: {
+              id: "sample-nodejs",
+              sidebar_label: "Sample-Nodejs",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-nodejs/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/sample-monorepo.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-monorepo/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-monorepo.
+:::`,
+            meta: {
+              id: "sample-monorepo",
+              sidebar_label: "Sample-Monorepo",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-monorepo/tree/main"
+            ),
+          },
+        ],
+      },
+    ],
+  ],
   presets: [
     [
       "@docusaurus/preset-classic",

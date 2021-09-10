@@ -1763,6 +1763,14 @@
   "resolved" "https://registry.npmjs.org/@braintree/sanitize-url/-/sanitize-url-3.1.0.tgz"
   "version" "3.1.0"
 
+"@crossid/docusaurus-remote-content@^0.1.5":
+  "integrity" "sha512-+bqrS0BjHwRMgznv3E9nzvgqZ4e2eeWii30gXkBFQrmBZnQZSPTxf7pzfWlaPnwAYW9PQN5+kK+FxK/3/pk7bQ=="
+  "resolved" "https://registry.npmjs.org/@crossid/docusaurus-remote-content/-/docusaurus-remote-content-0.1.5.tgz"
+  "version" "0.1.5"
+  dependencies:
+    "axios" "^0.21.4"
+    "pretty-ms" "^7.0.1"
+
 "@docsearch/css@3.0.0-alpha.40":
   "integrity" "sha512-PrOTPgJMl+Iji1zOH0+J0PEDMriJ1teGxbgll7o4h8JrvJW6sJGqQw7/bLW7enWiFaxbJMK76w1yyPNLFHV7Qg=="
   "resolved" "https://registry.npmjs.org/@docsearch/css/-/css-3.0.0-alpha.40.tgz"
@@ -2687,6 +2695,7 @@
     "@algolia/transporter" "4.10.5"
 
 "algoliasearch@^4.9.1":
+  "integrity" "sha512-KmH2XkiN+8FxhND4nWFbQDkIoU6g2OjfeU9kIv4Lb+EiOOs3Gpp7jvd+JnatsCisAZsnWQdjd7zVlW7I/85QvQ=="
   "version" "4.10.5"
   dependencies:
     "@algolia/cache-browser-local-storage" "4.10.5"
@@ -2898,7 +2907,8 @@
     "normalize-range" "^0.1.2"
     "postcss-value-parser" "^4.1.0"
 
-"axios@^0.21.1":
+"axios@^0.21.1", "axios@^0.21.4":
+  "integrity" "sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg=="
   "version" "0.21.4"
   dependencies:
     "follow-redirects" "^1.14.0"
@@ -6617,6 +6627,7 @@
   "version" "1.0.1"
 
 "mdx-mermaid@^1.1.0":
+  "integrity" "sha512-hmY1KWu7YqIfNSOnrsnxCUTq2sRklnNc9OyHz+SRSQDJuYo2ZCQP2PHciR2oK9sPAwHSvpnTep6w5ha2Gl98WQ=="
   "version" "1.1.0"
 
 "media-typer@0.3.0":
@@ -6648,6 +6659,7 @@
   "version" "1.4.1"
 
 "mermaid@^8.0.0", "mermaid@^8.12.1":
+  "integrity" "sha512-0UCcSF0FLoNcPBsRF4f9OIV32t41fV18//z8o3S+FDz2PbDA1CRGKdQF9IX84VP4Tv9kcgJI/oqJdcBEtB/GPA=="
   "version" "8.12.1"
   dependencies:
     "@braintree/sanitize-url" "^3.1.0"
@@ -7225,6 +7237,11 @@
     "json-parse-even-better-errors" "^2.3.0"
     "lines-and-columns" "^1.1.6"
 
+"parse-ms@^2.1.0":
+  "integrity" "sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA=="
+  "resolved" "https://registry.npmjs.org/parse-ms/-/parse-ms-2.1.0.tgz"
+  "version" "2.1.0"
+
 "parse-numeric-range@^1.2.0":
   "integrity" "sha512-1q2tXpAOplPxcl8vrIGPWz1dJxxfmdRkCFcpxxMBerDnGuuHalOWF/xj9L8Nn5XoTUoB/6F0CeQBp2fMgkOYFg=="
   "resolved" "https://registry.npmjs.org/parse-numeric-range/-/parse-numeric-range-1.2.0.tgz"
@@ -7700,6 +7717,13 @@
   dependencies:
     "lodash" "^4.17.20"
     "renderkid" "^2.0.6"
+
+"pretty-ms@^7.0.1":
+  "integrity" "sha512-973driJZvxiGOQ5ONsFhOF/DtzPMOMtgC11kCpUrPGMTgqp2q/1gwzCquocrN33is0VZ5GFHXZYMM9l6h67v2Q=="
+  "resolved" "https://registry.npmjs.org/pretty-ms/-/pretty-ms-7.0.1.tgz"
+  "version" "7.0.1"
+  dependencies:
+    "parse-ms" "^2.1.0"
 
 "pretty-time@^1.1.0":
   "integrity" "sha512-28iF6xPQrP8Oa6uxE6a1biz+lWeTOAPKggvjB8HAs6nVMKZwf5bG++632Dx614hIWgUPkgivRfG+a8uAXGTIbA=="
