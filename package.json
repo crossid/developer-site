@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start --port 9004",
+    "start": "npm run fetch-remote-docs && docusaurus start --port 9004",
     "build": "npm run fetch-remote-docs && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",

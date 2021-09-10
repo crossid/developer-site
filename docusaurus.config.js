@@ -1,14 +1,28 @@
 const transformer = require("@crossid/docusaurus-remote-content").transformer;
 
+const regexMdLinks = /\[([^\[]+)\](\(.*?\))/gm;
+const singleMatch = /\[([^\[]+)\]\((.*)\)/;
 function createRemoteContentTransformer(path) {
   return function remoteContentTransformer(c, data) {
-    const d = transformer(c, data);
-    return d.replace(/(\(\.\/(.*?)\))/gi, `(${path}/$2)`);
+    let td = transformer(c, data);
+    const matches = data.match(regexMdLinks);
+    for (let i = 0; i < matches.length; i++) {
+      let match = singleMatch.exec(matches[i]);
+      let link = match[2];
+
+      if (!link.startsWith("http")) {
+        let part = link.startsWith("./") ? link.substring(1) : link;
+        part = part.startsWith("/") ? part : "/" + part;
+        td = td.replace(match[0], `[${match[1]}](${path + part})`);
+      }
+    }
+
+    return td;
   };
 }
 
 module.exports = {
-  title: "Crossid Developer Hub",
+  title: "Developer Hub",
   tagline:
     "Add authentication and authorization to your apps, APIs and devices.",
   url: "https://developer.crossid.io",
@@ -24,7 +38,7 @@ module.exports = {
     },
     navbar: {
       hideOnScroll: true,
-      title: "Crossid Developer Hub",
+      title: "Developer Hub",
       logo: {
         alt: "CrossID Logo",
         src: "img/logot-909x254.png",
@@ -143,7 +157,7 @@ This content is from the README file of https://github.com/crossid/sample-nodejs
 :::`,
             meta: {
               id: "sample-nodejs",
-              sidebar_label: "Sample-Nodejs",
+              sidebar_label: "Node.js",
               hide_title: true,
             },
             transform: createRemoteContentTransformer(
@@ -158,11 +172,41 @@ This content is from the README file of https://github.com/crossid/sample-monore
 :::`,
             meta: {
               id: "sample-monorepo",
-              sidebar_label: "Sample-Monorepo",
+              sidebar_label: "Monorepo",
               hide_title: true,
             },
             transform: createRemoteContentTransformer(
               "https://github.com/crossid/sample-monorepo/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/samples-golang.md",
+            url: "https://raw.githubusercontent.com/crossid/samples-golang/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/samples-golang.
+:::`,
+            meta: {
+              id: "samples-golang",
+              sidebar_label: "Golang",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/samples-golang/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/sample-js.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-js/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-js.
+:::`,
+            meta: {
+              id: "sample-js",
+              sidebar_label: "Javascript",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-js/tree/main"
             ),
           },
         ],
