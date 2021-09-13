@@ -14,7 +14,7 @@ Crossid offers many more identity services that drastically simplifies identity 
 
 - Check other guides and concepts.
 - See [languages](/docs/languages) for language specific.
-- Get an _API Token_ to interact with the [REST API](/docs/reference/api).
+- Get an _API Token_ to interact with the [REST API](/api/v1).
 - Read the [Blog](/blog).
 
 Needs more help? [Contact us.](https://crossid.io/contact)

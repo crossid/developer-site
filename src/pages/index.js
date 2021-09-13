@@ -25,7 +25,7 @@ const features = [
   },
   {
     title: "Reference",
-    to: "/docs/reference/api",
+    to: "/api/v1",
     imageUrl: "img/undraw_reference.svg",
     description: <>API References</>,
   },

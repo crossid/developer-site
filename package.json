@@ -22,7 +22,8 @@
     "mdx-mermaid": "^1.1.0",
     "mermaid": "^8.12.1",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "redocusaurus": "^0.4.6"
   },
   "browserslist": {
     "production": [

@@ -51,8 +51,7 @@ module.exports = {
           position: "left",
         },
         {
-          type: "doc",
-          docId: "reference/api/api-overview",
+          to: "/api/v1",
           label: "API",
           position: "left",
         },
@@ -82,7 +81,7 @@ module.exports = {
             },
             {
               label: "Reference",
-              to: "docs/reference/api",
+              to: "/api/v1",
             },
           ],
         },
@@ -235,6 +234,21 @@ This content is from the README file of https://github.com/crossid/sample-js.
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+      },
+    ],
+    [
+      "redocusaurus",
+      {
+        specs: [
+          {
+            specUrl: `https://raw.githubusercontent.com/crossid/openapi/spec/openapi.yaml`,
+            routePath: "/api/v1/",
+          },
+        ],
+        theme: {
+          primaryColor: "#4F46E5",
+          redocOptions: { hideDownloadButton: false },
         },
       },
     ],
