@@ -6,7 +6,7 @@ slug: /guides/howto/add-spa-app
 description: How to let Crossid know about your Single Page Application (SPA).
 ---
 
-import AddSpaApp from "../../../src/components/\_AddSpaApp.mdx";
+import AddSpaApp from "../../../src/components/AddSpaApp.mdx";
 
 ### What is an app?
 

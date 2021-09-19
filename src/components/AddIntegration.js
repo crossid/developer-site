@@ -2,7 +2,7 @@ import React from "react";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-export default function AddIntegration({ name }) {
+export default function AddIntegration({ name, steps }) {
   return (
     <>
       <Tabs
@@ -18,7 +18,11 @@ export default function AddIntegration({ name }) {
             <li>
               Choose <b>{name}</b> and click on <b>Add Integration</b>
             </li>
-            <li>Follow wizard steps.</li>
+            {steps && steps.length ? (
+              steps.map((s, i) => <li key={i}>{s}</li>)
+            ) : (
+              <li>Follow wizard steps.</li>
+            )}
           </ul>
         </TabItem>
       </Tabs>

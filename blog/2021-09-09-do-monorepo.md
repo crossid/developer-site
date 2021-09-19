@@ -9,7 +9,7 @@ author_url: https://github.com/asaf
 tags: [digitalocean, auth, iam, ciam]
 ---
 
-import AddSpaApp from "../src/components/\_AddSpaApp.mdx";
+import AddSpaApp from "../src/components/AddSpaApp.mdx";
 import AppUserAssignment from "../src/components/AssignUserToApp.mdx";
 
 With DigitalOcean app platform, it is possible to deploy multiple components (such as _frontend_ and _backend_) from a single code repository.
