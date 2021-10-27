@@ -208,6 +208,96 @@ This content is from the README file of https://github.com/crossid/sample-js.
               "https://github.com/crossid/sample-js/tree/main"
             ),
           },
+          {
+            file: "sample_apps/sample-flask.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-flask/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-flask.
+:::`,
+            meta: {
+              id: "sample-flask",
+              sidebar_label: "Python Flask",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-flask/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/sample-django.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-django/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-django.
+:::`,
+            meta: {
+              id: "sample-django",
+              sidebar_label: "PHP Dhango",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-laravel/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/sample-python.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-python/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-python.
+:::`,
+            meta: {
+              id: "sample-python",
+              sidebar_label: "Python",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-python/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/sample-laravel.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-laravel/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-laravel.
+:::`,
+            meta: {
+              id: "sample-laravel",
+              sidebar_label: "PHP Laravel",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-laravel/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/sample-ror.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-ror/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-ror.
+:::`,
+            meta: {
+              id: "sample-ror",
+              sidebar_label: "Ruby On Rails",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-ror/tree/main"
+            ),
+          },
+          {
+            file: "sample_apps/sample-ruby.md",
+            url: "https://raw.githubusercontent.com/crossid/sample-ruby/main/README.md",
+            header: `:::note
+This content is from the README file of https://github.com/crossid/sample-ruby.
+:::`,
+            meta: {
+              id: "sample-ruby",
+              sidebar_label: "Ruby",
+              hide_title: true,
+            },
+            transform: createRemoteContentTransformer(
+              "https://github.com/crossid/sample-ruby/tree/main"
+            ),
+          },
         ],
       },
     ],

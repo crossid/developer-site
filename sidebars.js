@@ -23,6 +23,12 @@ module.exports = {
       "sample_apps/sample-nodejs",
       "sample_apps/samples-golang",
       "sample_apps/sample-js",
+      "sample_apps/sample-flask",
+      "sample_apps/sample-django",
+      "sample_apps/sample-python",
+      "sample_apps/sample-laravel",
+      "sample_apps/sample-ror",
+      "sample_apps/sample-ruby",
     ],
     Languages: [
       "langs/overview",
