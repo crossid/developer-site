@@ -10,11 +10,11 @@ values={[
 <TabItem value="console">
 
 1. In Admin console, navigate to <b>Integration &rarr; Marketplace</b>.
-1. Choose <b>Single Page Application (SPA)</b>.
+1. Choose <b>Web Page Application</b>.
 1. Click on <b>Add Integration</b>.
 1. Follow wizard steps.
 
-![how-to](/img/add_spa.gif)
+![how-to](/img/add_web_app.gif)
 
 </TabItem>
 <TabItem value="curl">
@@ -24,16 +24,16 @@ curl -X POST \
 -H "Authorization: Bearer <API_TOKEN>" \
 -d '
 {
-   "type":"singlePageApp",
+   "type":"webApp",
    "data":[
       {
          "type":"appManifest",
          "collectorId":"appDetails",
          "vars":{
-            "appId":"myspa",
-            "displayName":"My SPA",
+            "appId":"mynodeapp",
+            "displayName":"My Node App",
             "active":true,
-            "appLogic":"local",
+            "appLogic":"scimv2",
             "types":[
                "scimGroup",
                "userLink"
@@ -55,19 +55,16 @@ curl -X POST \
                "authorization_code"
             ],
             "response_types":[
-               "code"
+               "code",
+               "id_token",
+               "code id_token"
             ],
             "scope":"openid offline profile email",
-            "token_endpoint_auth_method":"none",
-            "allow_refresh_token":false,
             "redirect_uris":[
                "https://localhost/callback"
             ],
             "post_logout_redirect_uris":[
                "https://localhost/callback"
-            ],
-            "allowed_cors_origins":[
-               "https://localhost*"
             ]
          }
       }
