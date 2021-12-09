@@ -15,6 +15,7 @@ module.exports = {
           "guides/howto/add_spa_app",
           "guides/howto/add_web_app",
           "guides/howto/app_user_assignment",
+          "guides/howto/machine_to_machine",
         ],
       },
     ],
