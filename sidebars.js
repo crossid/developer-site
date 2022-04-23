@@ -16,10 +16,16 @@ module.exports = {
           "guides/howto/add_web_app",
           "guides/howto/app_user_assignment",
           "guides/howto/machine_to_machine",
+          "guides/howto/custom_domain",
         ],
       },
     ],
-    Concepts: ["concepts/tenant", "concepts/application", "concepts/identity"],
+    Concepts: [
+      "concepts/tenant",
+      "concepts/application",
+      "concepts/identity",
+      "concepts/custom_domain",
+    ],
     "Sample Apps": [
       "sample_apps/sample-monorepo",
       "sample_apps/sample-nodejs",
