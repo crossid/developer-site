@@ -2,7 +2,7 @@
 id: custom_domain
 title: Add custom domain.
 sidebar_label: Custom Domain
-slug: /guides/howto/custom_domain
+slug: /guides/howto/custom-domain
 description: How to add a custom domain.
 ---
 

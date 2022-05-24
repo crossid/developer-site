@@ -19,3 +19,7 @@ This has several advantages:
 - Branding, your users don't leave your own domain.
 - Easy migration between identity services.
 - Security and cookie data sharing.
+
+:::info
+For instructions, see [Custom Domains How-To](/docs/guides/howto/custom-domain)
+:::
