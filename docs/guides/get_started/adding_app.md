@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 An _app_ represents your application where users logs in.
 
-For simplicty, let's create a server-side web app.
+For simplicity, let's create a server-side web app.
 
 :::note
 Crossid supports various app types such as _single page applications (SPA)_, _mobile_ and _APIs_. for more info see [application](/docs/concepts/application).
@@ -28,7 +28,7 @@ To speed things up, let's start from a sample with a framework of your choice.
 | Node.js Express | [see walk through](/docs/langs/backend/nodejs-express) |
 | Golang          | https://github.com/crossid/samples-golang              |
 
-Each sample has a _README.md_ file with instructipns how to set up the sample.
+Each sample has a _README.md_ file with instructions how to set up the sample.
 
 :::note
 For more in-depth guides per language, check [languages](/docs/languages).
@@ -91,6 +91,6 @@ Crossid will give you back _client id_ and _client secret_ needed for our app.
 
 ### Update your app
 
-Everytime a user tries to login, the app should redirect to Crossid and provide the _client id_.
+Every time a user tries to login, the app should redirect to Crossid and provide the _client id_.
 
 Follow the _README.md_ of the sample project how to set the _client_id_ and optionally the _client_secret_ in your app.

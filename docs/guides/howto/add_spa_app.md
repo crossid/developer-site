@@ -26,4 +26,4 @@ Crossid will give you back _client id_ to be embedded into your app's code.
 
 ## Update your app
 
-Everytime a user tries to login, the app should redirect to Crossid and provide the _client id_.
+Every time a user tries to login, the app should redirect to Crossid and provide the _client id_.

@@ -38,7 +38,7 @@ This requires you to add a TXT record with the given details in your domain entr
 
 <img src="/img/howto/customdomain_dns_record.png" width="60%"/><br/><br/>
 
-(See below if your DNS provider is Godaddy)
+(See below if your DNS provider is GoDaddy)
 
 After adding the DNS record, click the **Verify Domain** button.
 
@@ -54,11 +54,11 @@ Issuing a certificate is beyond the scope of this tutorial.
 
 Once a certificate issued, you should have a PEM file with a full chain certificate and a key.
 
-In the domains action, click the **deploy** button (see screenshow above).
+In the domains action, click the **deploy** button (see screenshot above).
 
 Provide the certificate and key and click deploy.
 
-If everything is okay, the delpoyment state should be green.
+If everything is okay, the deployment state should be green.
 
 Wait a bit for the deployment process to end.
 
@@ -66,15 +66,15 @@ Wait a bit for the deployment process to end.
 
 Refer to your domain instead of _crossid.io_, for example, if your tenant is _acme_, located in US then
 
-OAuth endpoints would be refered to: _https://acme.crossid.io/oauth2/.well-known/openid-configuration_
+OAuth endpoints would be referred to: _https://acme.crossid.io/oauth2/.well-known/openid-configuration_
 
 If your custom domain is _auth.acme.io_, your can refer now to the URL: _https://auth.acme.io/oauth2/.well-known/openid-configuration_ instead.
 
 ## DNS Providers
 
-### Godaddy
+### GoDaddy
 
-If your domain is hosted in Godaddy follow these steps:
+If your domain is hosted in GoDaddy follow these steps:
 
 1. Open https://dcc.godaddy.com/manage/acme.io/dns
 1. Put a _TXT_ record with the given _name_ and _value_.

@@ -6,7 +6,7 @@ slug: /concepts/identity
 description: What is an Identity
 ---
 
-An _identity_ (sometimes refered as a _person_) represents a human being that require access to interact with some applications.
+An _identity_ (sometimes referred as a _person_) represents a human being that require access to interact with some applications.
 
 With public sites, an identity typically represents a customer, while in workforce it typically represents an employee or contractor.
 
