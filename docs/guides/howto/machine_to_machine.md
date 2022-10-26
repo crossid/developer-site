@@ -3,12 +3,12 @@ id: machine_to_machine
 title: Machine to Machine
 sidebar_label: Machine to Machine
 slug: /guides/howto/machine-to-machine
-description: How to programatically access a machine from a machin.
+description: How to programmatically access a machine from a machine.
 ---
 
 A service (aka: _machine_) is a non human program that may request an access token from _Crossid_ in order to authenticate to other services.
 
-A good example is a micro service or a schedueld job that requires access to a protected REST API.
+A good example is a micro service or a scheduled job that requires access to a protected REST API.
 
 This how-to explains how to perform authentication programmatically, with no user interaction, so a service could access some API.
 
@@ -55,7 +55,7 @@ curl -X POST \
 
 ### Machine to Machine
 
-Thie machine to machine integration will make our service account be able to authenticate via OAuth2.
+This machine to machine integration will make our service account be able to authenticate via OAuth2.
 
 <Tabs
 defaultValue="console"

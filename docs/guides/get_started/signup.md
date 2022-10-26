@@ -57,10 +57,10 @@ Check your email for tenant activation.
 ## Get API token
 
 :::note
-API token is only required if you plan to interact with the REST API using an HTTP clinet such as curl. Skip this step if you plan to use the web admin console.
+API token is only required if you plan to interact with the REST API using an HTTP client such as curl. Skip this step if you plan to use the web admin console.
 :::
 
-Let's get a short access token that is required to securely intreact with Crossid API.
+Let's get a short access token that is required to securely interact with Crossid API.
 
 <Tabs
 defaultValue="console"

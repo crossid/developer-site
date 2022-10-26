@@ -11,7 +11,7 @@ import TabItem from '@theme/TabItem';
 
 A person is a digital representation of a human that access your apps. this can be a customer for public web sites or an employee for a private app.
 
-With Crossid you don't need to maintain your own user management. Ceating new user profile, granting permissions, unlock or reseting credentials can all be done via the admin console.
+With Crossid you don't need to maintain your own user management. Creating new user profile, granting permissions, unlock or resetting credentials can all be done via the admin console.
 
 Lets add a new person:
 

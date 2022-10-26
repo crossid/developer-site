@@ -78,7 +78,7 @@ app.get("/", (req, res) => {
 app.listen(3005, () => console.log("listening at http://localhost:3005"));
 ```
 
-Let's start a reverse proxy which will route any traffic comming from 443 to port 3005.
+Let's start a reverse proxy which will route any traffic coming from 443 to port 3005.
 
 ```bash
 caddy reverse-proxy --from localhost:443 --to localhost:3005
