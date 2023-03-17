@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const features = [
   {
     title: "Guides",
-    to: "/docs/guides/get-started",
+    to: "https://crossid.io/docs",
     imageUrl: "img/undraw_guides.svg",
     description: (
       <>
@@ -19,7 +19,7 @@ const features = [
   },
   {
     title: "Concepts",
-    to: "/docs/concepts/application",
+    to: "https://crossid.io/docs/concepts/application",
     imageUrl: "img/undraw_concepts.svg",
     description: <>How CrossID Works.</>,
   },
@@ -63,15 +63,15 @@ function Home() {
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
-            <Link
+            <a
               className={clsx(
                 "button button--outline button--primary button--lg",
                 styles.getStarted
               )}
-              to={useBaseUrl("docs/guides/get-started")}
+              href={"https://crossid.io/docs"}
             >
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       </header>

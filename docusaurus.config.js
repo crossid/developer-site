@@ -45,19 +45,18 @@ module.exports = {
       },
       items: [
         {
-          type: "doc",
-          docId: "guides/get_started/preface",
+          href: "https://crossid.io/docs",
           label: "Docs",
           position: "left",
         },
+        { href: "https://crossid.io/blog", label: "Blog", position: "left" },
         {
           to: "/api/v1",
           label: "API",
           position: "left",
         },
-        { to: "blog", label: "Blog", position: "left" },
         {
-          to: "/support",
+          href: "https://crossid.io/support",
           label: "Support",
           position: "right",
         },
@@ -77,7 +76,7 @@ module.exports = {
           items: [
             {
               label: "Get Started",
-              to: "docs/guides/get-started",
+              href: "https://crossid.io/docs",
             },
             {
               label: "Reference",
@@ -106,12 +105,12 @@ module.exports = {
           title: "More",
           items: [
             {
-              label: "Crossid Website",
+              label: "crossid.io",
               href: "https://crossid.io",
             },
             {
               label: "Blog",
-              to: "blog",
+              href: "https://crossid.io/blog",
             },
             {
               label: "GitHub",
@@ -128,7 +127,7 @@ module.exports = {
             },
             {
               label: "About",
-              href: "https://www.crossid.io/company",
+              href: "https://crossid.io/company",
             },
           ],
         },
